@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Newsletter sign-up form with success message</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="main">
+    
+    <article class="sign-up">
+      <picture>
+        <source media="(min-width: 54em)" srcset="images/illustration-sign-up-desktop.svg">
+        <source media="(min-width: 44em)" srcset="images/illustration-sign-up-tablet.svg">
+        <img src="images/illustration-sign-up-mobile.svg" alt="">
+      </picture>
+      <div class="sign-up__content">
+        <h1 class="sign-up__title">Stay updated!</h1>
+      
+        <p class="sign-up__description">Join 60,000+ product managers receiving monthly updates on:</p>
+        
+        <ul class="sign-up__list">
+          <li class="sign-up__item">Product discovery and building what matters</li>
+          <li class="sign-up__item">Measuring to ensure updates are a success</li>
+          <li class="sign-up__item">And much more!</li>
+        </ul>
+
+        <form action="" class="sign-up__form" novalidate preventDefault>
+          <div class="sign-up__labels">
+            <label class="sign-up__label" for="email" >Email address</label>
+            <p class="sign-up__error">Valid email required</p>
+          </div>
+          <input class="sign-up__input" type="email" placeholder="email@company.com" name="email" id="email" required>
+          <input class="sign-up__button" type="submit" value="Subscribe to monthly newsletter">
+        
+        </form>
+      </div>
+    </article>
+
+    <section class="success" hidden>
+      <h1 class="success__title">Thanks for subscribing!</h1>
+
+      <p class="success__description">
+        A confirmation email has been sent to <strong class="success__email"></strong>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <button class="success__button">Dismiss message</button>
+    </section>
+  </main>
+</body>
+</html>

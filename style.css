@@ -1,0 +1,121 @@
+*, *::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img
+{
+    display: block;
+}
+:root
+{
+    --font-base: 'Roboto', sans-serif;
+    --Red: hsl(4, 100%, 67%);
+    --Blue_800: hsl(234, 29%, 20%);
+    --Blue_700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%,58%);
+    --White: hsl(0, 0%, 100%);
+}
+[hidden] {
+  display: none !important;
+}
+body {
+    font-family: var(--font-base);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.sign-up, .success {
+    background-color: var(--White);
+}
+
+h1 {
+    font-size: clamp(2.3em, 10vw, 3.3em);
+    line-height: 2;
+    font-weight: 700;
+}
+
+
+.sign-up img {
+    display: block;
+    min-width: 100%;
+    margin-bottom: 1em;
+}
+
+.sign-up__content {
+    margin-inline: auto;
+    padding: 0 1.5em;
+}
+
+.sign-up__description {
+    margin-bottom: 1em;
+}
+.sign-up__list {
+    display: block;
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+.sign-up__item {
+    position: relative;
+    padding-left: 2.2em;
+    margin-bottom: 0.5em;
+}
+.sign-up__item::before {
+    content: '';
+    background: url("images/icon-list.svg") no-repeat;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    left: 0;
+}
+
+
+.sign-up__form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sign-up__labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-bottom: 0.75em;
+}
+
+.sign-up__error {
+    display: none;
+    color: var(--Red);
+}
+.sign-up__form--error .sign-up__error {
+    display: block;
+}
+.sign-up__form--error .sign-up__input {
+    border-color: var(--Red);
+    background-color: color-mix(in srgb, var(--Red) 15%, white);
+    color: var(--Red);
+}
+.sign-up__input {
+    padding: 1.2em;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.sign-up__input::placeholder {
+    color: var(--Grey);
+}
+.sign-up__form--error  .sign-up__input::placeholder {
+    color: var(--Red);
+}
+.sign-up__button {
+    padding: 1.2em;
+    color: var(--White);
+    font-weight: 700;
+    background-color: var(--Blue_800);
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
