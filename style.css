@@ -22,6 +22,7 @@ img
 }
 body {
     font-family: var(--font-base);
+    color: var(--Blue_700);
     font-size: 1em;
     line-height: 1.5;
 }
@@ -31,8 +32,9 @@ body {
 }
 
 h1 {
-    font-size: clamp(2.3em, 10vw, 3.3em);
-    line-height: 2;
+    margin: 2rem 0;
+    font-size: clamp(2.3rem, 9.375vw, 3.3rem);
+    line-height: 1.1;
     font-weight: 700;
 }
 
@@ -43,7 +45,7 @@ h1 {
     margin-bottom: 1em;
 }
 
-.sign-up__content {
+.content {
     margin-inline: auto;
     padding: 0 1.5em;
 }
@@ -110,7 +112,7 @@ h1 {
 .sign-up__form--error  .sign-up__input::placeholder {
     color: var(--Red);
 }
-.sign-up__button {
+.button {
     padding: 1.2em;
     color: var(--White);
     font-weight: 700;
@@ -118,4 +120,25 @@ h1 {
     border: 0;
     border-radius: 5px;
     margin-bottom: 1em;
+}
+.button:hover, .button:focus-visible {
+    background: linear-gradient(to right, var(--Red), hsl(16, 100%, 62%));
+    box-shadow: 0 1rem 2rem hsl(4 100% 67% / 0.5)
+}
+
+
+
+.success__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.success__picture {
+    margin-top: 9em;
+    width: 4em;
+}
+
+.success__button {
+    margin-top: auto;
 }
