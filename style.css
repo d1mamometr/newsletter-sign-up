@@ -22,12 +22,12 @@ img
 }
 body {
     font-family: var(--font-base);
-    color: var(--Blue_700);
+    color: var(--Blue_800);
     font-size: 1em;
     line-height: 1.5;
 }
 
-.sign-up, .success {
+.main {
     background-color: var(--White);
 }
 
@@ -141,4 +141,40 @@ h1 {
 
 .success__button {
     margin-top: auto;
+}
+
+
+
+@media (min-width: 44em) {
+    body {
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--Blue_700);
+    }
+    .main {
+        display: flex;
+        padding: 0.5rem 1.5rem;
+        margin: 1rem;
+        border-radius: 2rem;
+    }
+    .sign-up {
+        max-width: 39rem;
+        padding: 1rem 0;
+    }
+
+    .success {
+        max-width: 28rem;
+        padding: 1.5rem 0;
+    }
+    .success__content {
+        min-height: auto;
+    }
+    .success__picture {
+        margin-top: 0.5rem;
+    }
+    .success__description {
+        margin-bottom: 2rem;
+    }
 }
