@@ -7,6 +7,7 @@
 img
 {
     display: block;
+    max-width: 100%;
 }
 :root
 {
@@ -16,6 +17,9 @@ img
     --Blue_700: hsl(235, 18%, 26%);
     --Grey: hsl(0, 0%,58%);
     --White: hsl(0, 0%, 100%);
+
+    --gradient-start: hsl(346, 100%, 66%);
+    --gradient-end: hsl(16, 100%, 62%);
 }
 [hidden] {
   display: none !important;
@@ -112,6 +116,9 @@ h1 {
 .sign-up__form--error  .sign-up__input::placeholder {
     color: var(--Red);
 }
+.sign-up__button, .success__button {
+    margin-bottom: 1em;
+}
 .button {
     padding: 1.2em;
     color: var(--White);
@@ -119,11 +126,14 @@ h1 {
     background-color: var(--Blue_800);
     border: 0;
     border-radius: 5px;
-    margin-bottom: 1em;
 }
-.button:hover, .button:focus-visible {
-    background: linear-gradient(to right, var(--Red), hsl(16, 100%, 62%));
+.button:hover, .button:focus, .button:focus-visible {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
     box-shadow: 0 1rem 2rem hsl(4 100% 67% / 0.5)
+}
+.button:focus-visible {
+    outline: 2px solid var(--Blue_800);
+    outline-offset: 3px;
 }
 
 
