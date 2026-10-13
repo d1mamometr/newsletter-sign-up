@@ -18,7 +18,7 @@ signUpForm.addEventListener('submit', (event) => {
 
 signUpInput.addEventListener('input', hideError);
 
-successButton.addEventListener('click', (event) => {
+successButton.addEventListener('click', () => {
     showForm();
     signUpForm.reset();
     signUpInput.focus();

@@ -21,13 +21,13 @@ img
     --gradient-start: hsl(346, 100%, 66%);
     --gradient-end: hsl(16, 100%, 62%);
 }
+/* hidden must win over any display value set for layout */
 [hidden] {
   display: none !important;
 }
 body {
     font-family: var(--font-base);
     color: var(--Blue_800);
-    font-size: 1em;
     line-height: 1.5;
 }
 
@@ -96,6 +96,12 @@ h1 {
     display: none;
     color: var(--Red);
 }
+.sign-up__input {
+    padding: 1.2em;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
 .sign-up__form--error .sign-up__error {
     display: block;
 }
@@ -103,12 +109,6 @@ h1 {
     border-color: var(--Red);
     background-color: color-mix(in srgb, var(--Red) 15%, white);
     color: var(--Red);
-}
-.sign-up__input {
-    padding: 1.2em;
-    border: 1px solid var(--Grey);
-    border-radius: 5px;
-    margin-bottom: 1em;
 }
 .sign-up__input::placeholder {
     color: var(--Grey);
