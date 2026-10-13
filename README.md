@@ -4,6 +4,8 @@ A newsletter sign-up form with email validation and a success message.
 
 **[Live demo](https://d1mamometr.github.io/newsletter-sign-up/)**
 
+![Screenshot](./preview.jpg)
+
 ## Overview
 
 Users can enter their email, get an inline error for invalid input,
@@ -27,3 +29,5 @@ The error clears as soon as the user starts correcting the field.
   with a `[hidden] { display: none !important }` rule so layout
   styles can't override it.
 - User input is inserted with `textContent`, never `innerHTML`.
+- There was no tablet design, so between 44em and 54em the layout stays
+  single-column inside the desktop card — two columns felt cramped at that width.
